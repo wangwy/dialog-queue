@@ -2,6 +2,8 @@
 
 自从入职新公司一来，一直在做给app拉新的活动，最近接到一个活动，一进首页时会连续弹多个弹框提示用户获得的奖励或者完成的任务。现在将连续弹框的逻辑抽离出来，写了`DialogQueue`组件(该组建更多的是作为一个连续弹框的解决方案)。
 
+[Live Demo](https://wangwy.github.io/dialog-queue/example/index.html)
+
 ## use
 ```
 npm install dialog-queue

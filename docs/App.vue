@@ -5,10 +5,10 @@
             <h1>dialog 弹框组件</h1>
         </header>
         <main class="doc-block">
-            <readme/>
+            <doc/>
         </main>
         <main class="doc-block">
-            <doc/>
+            <readme/>
         </main>
     </div>
 </template>
