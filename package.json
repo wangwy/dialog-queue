@@ -1,0 +1,37 @@
+{
+  "name": "dialog-queue",
+  "version": "0.0.2",
+  "description": "弹框组件",
+  "main": "src/DialogQueue.vue",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cd docs && webpack",
+    "start": "cd docs && webpack-dev-server --open"
+  },
+  "author": "wangwenyuan03",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.2.0",
+    "file-loader": "^4.2.0",
+    "html-webpack-plugin": "^4.0.0-beta.3",
+    "markdown-it": "^10.0.0",
+    "markdown-it-container": "^2.0.0",
+    "style-loader": "^1.0.0",
+    "stylus": "^0.54.7",
+    "stylus-loader": "^3.0.2",
+    "vue-loader": "^15.7.1",
+    "vue-markdown-loader": "^2.4.1",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.10",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.8",
+    "webpack-dev-server": "^3.8.0"
+  },
+  "dependencies": {
+    "user": "0.0.0",
+    "vue": "^2.6.10"
+  }
+}
