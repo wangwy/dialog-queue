@@ -1,7 +1,7 @@
 {
   "name": "dialog-queue",
-  "version": "0.0.3",
-  "description": "弹框组件",
+  "version": "0.0.4",
+  "description": "连续弹框解决方案",
   "main": "src/DialogQueue.vue",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

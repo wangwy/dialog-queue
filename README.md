@@ -10,30 +10,83 @@ npm install dialog-queue
 ```
 
 ```
-<dialog-queue  @closeDialog="closeDialog" v-if=show1>
+<dialog-queue  @closeDialog="closeDialog('show')" v-if=show>
         <div class="test-dialog">
             test dialog
         </div>
 </dialog-queue>
-<button class="button" @click="show1 = true">开启弹窗</button>
+<div v-if=show1>
+    <dialog-queue  @closeDialog="closeDialog('show1')">
+            <div class="test-dialog">
+                test dialog1
+            </div>
+    </dialog-queue>
+</div>
+<div v-if=show2>
+    <dialog-queue  @closeDialog="closeDialog('show2')">
+            <div class="test-dialog">
+                test dialog2
+            </div>
+    </dialog-queue>
+</div>
+<div v-if=show3>
+    <dialog-queue  @closeDialog="closeDialog('show3')">
+            <div class="test-dialog">
+                test dialog3
+            </div>
+    </dialog-queue>
+</div>
+<div v-if=show4>
+    <dialog-queue  @closeDialog="closeDialog('show4')">
+            <div class="test-dialog">
+                test dialog4
+            </div>
+    </dialog-queue>
+</div>
+<button class="button" @click="show = true">开启弹窗</button>
+<button class="button" @click="show1 = show2 = show3 = show4 = true">连续弹窗</button>
 <script>
-  import DialogQueue from '../src/DialogQueue.vue';
+  import DialogQueue from 'dialog-queue';
   export default {
     data () {
       return {
-        show1: false
+        show: false,
+        show1: false,
+        show2: false,
+        show3: false,
+        show4: false
       }
     },
     components: {
         DialogQueue
     },
     methods: {
-        closeDialog() {
-            this.show1 = false;
+        closeDialog(arg) {
+            this[arg] = false;
         }
     }
   }
 </script>
+<style lang="stylus">
+    .test-dialog
+        width 200px
+        line-height 400px
+        text-align center
+        background antiquewhite
+        animation-name dialogIn
+        animation-duration .5s
+        animation-fill-mode forwards
+    @keyframes dialogIn
+        0%
+            transform scale(0, 0)
+        50%
+            transform scale(1.1, 1.1)
+        75%
+            transform scale(0.95, 0.95)
+        100%
+            transform scale(1, 1)
+
+</style>
 ```
 
 ### DialogQueue Attributes
