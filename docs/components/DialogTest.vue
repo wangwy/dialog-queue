@@ -1,7 +1,7 @@
 <template>
     <dialog-queue  @closeDialog="closeDialog">
         <div class="test-dialog">
-            test dialog
+            <slot></slot>
         </div>
     </dialog-queue>
 </template>

@@ -29,24 +29,17 @@ npm install dialog-queue
             </div>
     </dialog-queue>
 </div>
-<div v-if=show3>
-    <dialog-queue  @closeDialog="closeDialog('show3')">
-            <div class="test-dialog">
-                test dialog3
-            </div>
-    </dialog-queue>
-</div>
-<div v-if=show4>
-    <dialog-queue  @closeDialog="closeDialog('show4')">
-            <div class="test-dialog">
-                test dialog4
-            </div>
-    </dialog-queue>
-</div>
+<dialog-test v-if=show3 @closeTestDialog="closeDialog('show3')">
+    test dialog3
+</dialog-test>
+<dialog-test v-if=show4 @closeTestDialog="closeDialog('show4')">
+    test dialog4
+</dialog-test>
 <button class="button" @click="show = true">开启弹窗</button>
 <button class="button" @click="show1 = show2 = show3 = show4 = true">连续弹窗</button>
 <script>
-  import DialogQueue from 'dialog-queue';
+  import DialogQueue from '../src/DialogQueue.vue';
+  import DialogTest from './components/DialogTest.vue'
   export default {
     data () {
       return {
@@ -58,7 +51,8 @@ npm install dialog-queue
       }
     },
     components: {
-        DialogQueue
+        DialogQueue,
+        DialogTest
     },
     methods: {
         closeDialog(arg) {

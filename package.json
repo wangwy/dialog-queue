@@ -1,6 +1,6 @@
 {
   "name": "dialog-queue",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "连续弹框解决方案",
   "main": "src/DialogQueue.vue",
   "scripts": {

@@ -52,6 +52,7 @@
                 this.showDialog();
             }
             queue.push(this);
+            console.log(this.$slots.default)
         },
         destroyed() {
             queue.shift(this);
